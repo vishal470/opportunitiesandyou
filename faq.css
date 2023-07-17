@@ -1,0 +1,71 @@
+.faq {
+    background: #fff;
+    color: #333;
+    margin: 5px auto;
+    width: 90%;
+    max-width: 150rem;
+    min-height: 30rem;
+    border: 3px solid #FFDD61;
+    border-radius: 2rem;
+    padding-bottom: 20px;
+}
+
+.heros {
+    display: flex;
+    justify-content: center;
+}
+.heros .imgg {
+    height: 250px;
+    width:250px;
+    filter: drop-shadow(0rem 1.5rem rgba(0,0,0,0.1));
+    transition: 0.3s ease-out;
+}
+.faq:hover .imgg {
+    filter: drop-shadow(0rem 2.5rem rgba(0,0,0,0.1));
+}
+
+.acc-btn {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: all 0.5s linear;
+}
+.acc-btn:after {
+    content: "\27A4";
+    color: #fa8d0c;
+    float: right;
+    transition: all 0.3s linear;
+}
+.acc-btn.is-open:after {
+    transform: rotate(90deg);
+}
+.acc-btn:hover, .acc-btn.is-open {
+    color: #5A58E9;
+    font-weight: bold;
+}
+
+.acc-content {
+    max-height: 0;
+    color: rgba(0,0,0,0.75);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-bottom: 1px solid #5A58E9;
+}
+
+.credit {
+    text-align: center;
+    /* padding: 1rem; */
+}
+.credit a {
+    text-decoration: wavy underline;
+    color: dodgerblue;
+}
