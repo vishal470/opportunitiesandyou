@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login and Registration Form in HTML | CodingNepal</title>
+    <link rel="stylesheet" href="loginSignup.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+        <div class="title signup">Signup Form</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <!-- Login Form -->
+          <form
+            action="https://onubackend.onrender.com/auth/login"
+            method="POST"
+            class="login"
+          >
+            <div class="field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="">Signup now</a>
+            </div>
+          </form>
+          <!-- Signup Form -->
+          <form
+            action="https://onubackend.onrender.com/auth/register"
+            method="POST"
+            class="signup"
+          >
+            <div class="field">
+              <input
+                type="text"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm password"
+                required
+              />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="successMessage">Registration successful!</p>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginForm = document.querySelector("form.login");
+        const signupForm = document.querySelector("form.signup");
+
+        // Login form submission
+        loginForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const formData = new FormData(loginForm);
+          const responseData = await fetch(
+            "https://onubackend.onrender.com/auth/login",
+            {
+              method: "POST",
+              body: JSON.stringify(Object.fromEntries(formData.entries())),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          ).then((response) => response.json());
+
+          // Handle the login response
+          console.log(responseData);
+          if (responseData.message === "Login successful") {
+            // Redirect to index.html after successful login
+            window.location.href = "index.html";
+          }
+        });
+
+        // Signup form submission
+        signupForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const formData = new FormData(signupForm);
+          const responseData = await fetch(
+            "https://onubackend.onrender.com/auth/register",
+            {
+              method: "POST",
+              body: JSON.stringify(Object.fromEntries(formData.entries())),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          ).then((response) => response.json());
+
+          // Handle the signup response
+          console.log(responseData);
+          if (responseData.message === "Registration successful") {
+    // Show the modal
+    const modal = document.getElementById("myModal");
+    const successMessage = document.getElementById("successMessage");
+    modal.style.display = "block";
+    successMessage.textContent = responseData.message;
+
+    // Close the modal when the close button is clicked
+    const closeButton = document.getElementsByClassName("close")[0];
+    closeButton.onclick = () => {
+      modal.style.display = "none";
+      // Redirect to login form after modal is closed
+      window.location.href = "index.html";
+    };
+
+    // Close the modal after a delay
+    setTimeout(() => {
+      modal.style.display = "none";
+      // Redirect to login form after modal is closed
+      window.location.href = "#";
+    }, 3000); // Close after 3 seconds (adjust as needed)
+  }
+        });
+
+        // Other sliding and click event code
+        const loginText = document.querySelector(".title-text .login");
+        const signupBtn = document.querySelector("label.signup");
+        const loginBtn = document.querySelector("label.login");
+        const signupLink = document.querySelector("form .signup-link a");
+
+        signupBtn.onclick = () => {
+          loginForm.style.marginLeft = "-50%";
+          loginText.style.marginLeft = "-50%";
+        };
+
+        loginBtn.onclick = () => {
+          loginForm.style.marginLeft = "0%";
+          loginText.style.marginLeft = "0%";
+        };
+
+        signupLink.onclick = () => {
+          signupBtn.click();
+          return false;
+        };
+      });
+    </script>
+  </body>
+</html>
