@@ -471,17 +471,18 @@ Influncer
   border-bottom: 1px solid #ccc;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .cardd {
-      display: block; /* Show the cards as block elements on mobile */
+      display: block; 
+      
   }
 }
-/* Media query for larger devices like computers */
 @media (min-width: 768px) {
   .cardd {
-      display: none; /* Hide the cards on larger devices */
+      display: none; 
+      
   }
-}
+} */
 
 
 
