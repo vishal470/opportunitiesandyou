@@ -205,3 +205,26 @@ calcInput.onkeydown = function(e) {
 
 //FAQ
 
+document.addEventListener("DOMContentLoaded", () => {
+  const userFirstNameSpan = document.getElementById("userFirstNameSpan");
+  const loginSignupButton = document.querySelector("#userhlo");
+
+  // Assuming you have a way to determine when the user logs in
+  // For the purpose of this example, let's assume the user is logged in
+  const isLoggedIn = true;
+
+  if (isLoggedIn) {
+      fetch("https://onubackend.onrender.com", {
+          method: "GET"
+      })
+      .then(response => response.json())
+      .then(data => {
+          const firstName = data.first_name; // Assuming the API returns the user's first name
+          userFirstNameSpan.textContent = `Welcome, ${firstName}!`;
+          loginSignupButton.style.display = "none"; // Hide the login/signup button
+      })
+      .catch(error => {
+          console.error("Error fetching user data:", error);
+      });
+  }
+});
