@@ -144,13 +144,41 @@
           <li><b>2+</b> Video Outreach</li>
           <li>Customized shoutout captions</li>
         </ul>
-        <a
+        <button
           class="signup"
           id="btn1"
-          href="https://imjo.in/se22B3"
           style="top: 65px"
-          >Enroll</a
+          >Enroll</button
         >
+
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form action="/action_page.php">
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="country"><b>Country</b></label>
+    <select id="country" name="country" required>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject"><b>Subject</b></label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+
+</div>
       </div>
       <br />
       <div class="plan plan2" style="border-radius: 0px 0px 100px 100px">
@@ -169,7 +197,7 @@
             On: <b>40 - 60</b> Domains
           </li> -->
         </ul>
-        <a class="signup" id="btn2" href="" style="top: 85px">Enroll</a>
+        <button class="signup" id="btn2" style="top: 85px">Enroll</button>
       </div>
       <br />
       <div class="plan plan3" style="border-radius: 0px 0px 100px 100px">
@@ -188,7 +216,7 @@
             On: <b>40-60</b> Domains
           </li>
         </ul>
-        <a class="signup" id="btn3" href="" >Enroll</a>
+        <button class="signup" id="btn3" >Enroll</button>
       </div>
       <!-- <br />
       <div class="plan plan4" style="border-radius: 0px 0px 100px 100px">
@@ -230,7 +258,6 @@
         <a
           class="signup"
           id="btn4"
-          href="https://imjo.in/se22B3"
           style="top: 70px"
           >Enroll</a
         >
@@ -252,7 +279,7 @@
             On: <b>500-900</b> Domains
           </li>
         </ul>
-        <a class="signup" id="btn5" href="" style="top: 25px">Enroll</a>
+        <a class="signup" id="btn5"  style="top: 25px">Enroll</a>
       </div>
       <br />
       <div class="plan plan3" style="border-radius: 0px 0px 100px 100px">
@@ -270,7 +297,7 @@
             <b>Quality Backlinks + Complete SEO Delux Package + Complete Website SEO to rank #1 on Google!</b>
           </li>
         </ul>
-        <a class="signup" id="btn6" href="" style="top: 5px">Enroll</a>
+        <a class="signup" id="btn6"  style="top: 5px">Enroll</a>
       </div>
       <!-- <br />
       <div class="plan plan4" style="border-radius: 0px 0px 100px 100px">
@@ -334,7 +361,7 @@
             On: <b>40 - 60</b> Domains
           </li> -->
         </ul>
-        <a class="signup" id="btn8" href="" style="top: 150px">Enroll</a>
+        <a class="signup" id="btn8"  style="top: 150px">Enroll</a>
       </div>
       <br />
       <div class="plan plan3" style="border-radius: 0px 0px 100px 100px">
@@ -353,7 +380,7 @@
             On: <b>40-60</b> Domains
           </li>
         </ul>
-        <a class="signup" id="btn9" href="" style="top: 40px">Enroll</a>
+        <a class="signup" id="btn9" style="top: 40px">Enroll</a>
       </div>
       <!-- <br />
       <div class="plan plan4" style="border-radius: 0px 0px 100px 100px">
@@ -893,6 +920,7 @@
     ></script>
     <script src="./faq.js"></script>
     <script src="./infl.js"></script>
+    <script src="./pricing.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
