@@ -545,7 +545,7 @@ Influncer
 }
 
 .hero-text {
-  font-size: 18px;
+  font-size: 16px;
   margin-block: 30px 35px;
   font-family: "DM Sans", sans-serif;
 }
@@ -1327,6 +1327,7 @@ Influncer
   }
 
   
+  
   .btn {
     height: 70px;
   }
@@ -1565,6 +1566,7 @@ Influncer
   .header .container {
     padding-inline: 30px;
   }
+  
 
   .navbar-list {
     gap: 50px;
@@ -1994,6 +1996,8 @@ section {
   background-color: #fff;
   padding-bottom: 20px;
 }
+
+
 .calculate-wrap {
   height: 140px;
   display: flex;
