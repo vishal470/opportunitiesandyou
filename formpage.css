@@ -45,6 +45,41 @@ input[type=submit]:hover {
     color: black;
 }
 
+
+.tacbox {
+    display:flex;
+    gap: 15px;
+    padding: 1em;
+    margin: 1em;
+    border: 3px solid #ddd;
+    background-color: #eee;
+    max-width: 500px;
+  }
+  
+  input[type=checkbox] {
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+  }
+  /*
+  label {
+    outline: 2px dotted #f00;
+  }
+  
+  /*
+  label:after {
+    content: attr(for);
+  }*/
+/*
+label {
+  outline: 2px dotted #f00;
+}
+
+/*
+label:after {
+  content: attr(for);
+}*/
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .container1 {
