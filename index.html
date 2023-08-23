@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./faq.css" />
     <link rel="stylesheet" href="./infl.css" />
+    <link rel="stylesheet" href="./testimonial.css">
 
     <!-- 
     - google font link
@@ -61,7 +62,7 @@
 
     <header class="header" data-header>
       <div class="container">
-        <a href="#" class="logo" style="font-size: 25px;"><img src="./Logo/logo.png" alt="" srcset="" style="height: 90px; width: 230px;"></a>
+        <a href="#" class="logo" style="font-size: 25px;"><img src="./Logo/logo.png" alt="" srcset="" style="height: 60px;"></a>
         <nav class="navbar" data-navbar>
           <div class="wrapper">
             <a href="#" class="logo" style="font-size: 25px;">Opportunities And You (ONU)</a>
@@ -199,7 +200,7 @@
 
 
           <ul class="h2 section-title text-center">
-            CATEGORIES OF <span class="has-before"> INFLUNCER</span>
+            CATEGORIES OF <span class="has-before"> INFLUENCERS</span>
           </ul>
 
         <!-- <br> -->
@@ -1121,6 +1122,34 @@
     </main>
 
 
+
+<!--     
+
+Testimonials
+
+ -->
+ <div class="content-wrapper">
+  <h1>Our Reviews</h1>
+  <div class="blue-line"></div>
+  <div class="wrapper-for-arrows">
+    <div style="opacity: 0" class="chicken"></div>
+    <div id="reviewWrap" class="review-wrap">
+      <div id="imgDiv" class=""></div>
+      <div id="personName"></div>
+      <div id="profession"></div>
+      <div id="description"></div>
+    </div>
+    <!-- <div id="surpriseMeBtn" class="surprise-me-btn">Surprise me</div> -->
+    <div class="left-arrow-wrap arrow-wrap">
+      <div class="arrow" id="leftArrow"></div>
+    </div>
+    <div class="right-arrow-wrap arrow-wrap">
+      <div class="arrow" id="rightArrow"></div>
+    </div>
+  </div>
+</div>
+
+
 <!-- 
     #CONTACT 
   -->
@@ -1179,7 +1208,7 @@
 
 
   <!-- FAQ -->
-  <p class="section-subtitle text-center has-before" id="contact" style="font-size: 23px;">FAQ</p>
+  <p class="section-subtitle text-center has-before" id="contact" style="font-size: 23px;">FAQs</p>
   <br>
   <main class="faq">
     <div class="heros">
@@ -1354,6 +1383,9 @@
             <li>
               <a href="/" class="footer-link">Explore</a>
             </li>
+            <li>
+              <a href="./pricing.html" class="footer-link">Pricing</a>
+            </li>
 
             
           </ul>
@@ -1375,9 +1407,7 @@
               <a href="#" class="footer-link">Suggestions</a>
             </li>
 
-            <li>
-              <a href="./pricing.html" class="footer-link">Pricing</a>
-            </li>
+            
 
             <!-- <li>
               <a href="#" class="footer-link">Newsletters</a>
@@ -1584,7 +1614,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <script src="./faq.js"></script>
     <script src="./infl.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./testimonial.js"></script>
 
   </body>
 </html>
