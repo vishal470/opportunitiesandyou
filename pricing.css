@@ -53,7 +53,7 @@
 
 #pricing-table .headerss {
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   text-transform: uppercase;
   padding: 40px;
@@ -96,7 +96,7 @@
 /* --------------- */
 
 #pricing-table .price {
-  font-size: 38px;
+  font-size: 34px;
 }
 
 #pricing-table .monthly {
